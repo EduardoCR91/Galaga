@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galaga - Juego Clásico</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Galaga Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <canvas id="gameCanvas"></canvas>
+    <div id="start-screen">
+        <button id="start-button">Comenzar Juego</button>
+    </div>
+
+    <div id="game-screen" style="display: none;">
+        <div id="player"></div>
+        <div id="enemies"></div>
+        <div id="bullets"></div>
+        <div id="controls">
+            <button id="left-button">←</button>
+            <button id="shoot-button">Disparar</button>
+            <button id="right-button">→</button>
+        </div>
+    </div>
+
+    <div id="game-over-screen" style="display: none;">
+        <p>Game Over</p>
+        <button id="retry-button">Volver a Jugar</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
