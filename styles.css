@@ -15,10 +15,12 @@ body {
 
 #game-screen {
     position: relative;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 600px;
     background-color: #111;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 #player {
@@ -53,20 +55,31 @@ body {
 }
 
 #controls {
-    margin-top: 20px;
-    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
     display: none; /* Ocultar por defecto */
 }
 
 #controls button {
-    padding: 10px 20px;
+    padding: 15px 25px;
     font-size: 16px;
     cursor: pointer;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
 }
 
 /* Mostrar controles en pantallas táctiles */
 @media (hover: none) and (pointer: coarse) {
     #controls {
-        display: block;
+        display: flex;
     }
 }
